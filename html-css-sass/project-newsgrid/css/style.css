@@ -171,6 +171,10 @@ h6 {
   padding: 3rem;
 }
 
+.l-heading {
+  font-size: 3rem;
+}
+
 .list li {
   padding: 0.5rem 0;
   border-bottom: 1px dotted #555;
@@ -297,6 +301,19 @@ h6 {
 
 #home-articles .card img {
   padding: 0.3rem 0;
+}
+
+/* Article page */
+#article .meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #eee;
+  padding: 0.5rem;
+}
+
+#article .meta .category {
+  margin-top: 0.4rem;
 }
 
 /* Footer */
