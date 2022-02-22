@@ -24,7 +24,9 @@ ul {
   list-style: none;
 }
 
-h2, h3, h4 {
+h2,
+h3,
+h4 {
   text-transform: uppercase;
 }
 
@@ -74,6 +76,7 @@ img {
 
 // Header
 #header {
+
   // Header home
   &-home {
     background: $bg-image no-repeat center right / cover;
@@ -92,13 +95,12 @@ img {
     }
   }
 
-  &-inner {
-
-  }
+  &-inner {}
 }
 
 // Home sections
 #home {
+
   // Home section a
   &-a {
     .specials {
@@ -143,6 +145,83 @@ img {
         &:nth-child(even) {
           background: $medium-color;
         }
+      }
+    }
+  }
+
+  // Home section c
+  &-c {
+    .process {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 1.5rem;
+      text-align: center;
+      padding-bottom: 1.5rem;
+
+      // process-step
+      &-step {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        background: $main-color;
+        color: set-text-color($main-color);
+        border-radius: 50%;
+        height: 15px;
+        width: 15px;
+        line-height: 15px;
+        padding: 1rem;
+        transition: all 1s;
+      }
+
+      // process-icon
+      &-icon {
+        border-radius: 50%;
+        background: $dark-color;
+        color: set-text-color($dark-color);
+        width: 90px;
+        height: 90px;
+        line-height: 90px;
+        text-align: center;
+        position: relative;
+        transition: all 1s;
+
+        &:hover {
+          background: $main-color;
+          width: 100px;
+          height: 100px;
+          line-height: 100px;
+
+          .process-step {
+            background: $dark-color;
+            color: set-text-color($dark-color);
+          }
+        }
+      }
+    }
+  }
+}
+
+// Footer
+#main-footer {
+  background: $dark-color;
+  color: #fff;
+  height: 5rem;
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    height: 5rem;
+    align-items: center;
+
+    .social .fa-brands {
+      margin-right: 1rem;
+
+      &:hover {
+        color: $main-color;
       }
     }
   }
